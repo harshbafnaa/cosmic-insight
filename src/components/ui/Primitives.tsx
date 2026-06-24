@@ -76,8 +76,8 @@ export function SimulatedBanner({ lang }: { lang: 'en' | 'hi' }) {
       <AlertTriangle size={18} className="shrink-0" />
       <span>
         {lang === 'hi'
-          ? 'सिमुलेटेड डेटा दिखाया जा रहा है (कोई API कुंजी नहीं या त्रुटि)। वास्तविक विश्लेषण हेतु VITE_ANTHROPIC_API_KEY जोड़ें।'
-          : 'Showing simulated data (no API key or an error occurred). Add VITE_ANTHROPIC_API_KEY for live AI analysis.'}
+          ? 'सिमुलेटेड डेटा दिखाया जा रहा है (कोई API कुंजी नहीं या त्रुटि)। वास्तविक विश्लेषण हेतु ANTHROPIC_API_KEY जोड़ें।'
+          : 'Showing simulated data (no API key or an error occurred). Add ANTHROPIC_API_KEY for live AI analysis.'}
       </span>
     </div>
   );
