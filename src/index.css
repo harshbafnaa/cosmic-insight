@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-void text-slate-100 font-sans antialiased;
+    background-image: theme('backgroundImage.twilight');
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-slate-900/50 backdrop-blur-xl border border-white/5;
+  }
+  .glass-gold {
+    @apply bg-slate-900/50 backdrop-blur-xl border border-gold/20;
+  }
+  .text-glow {
+    text-shadow: 0 0 20px rgba(244, 208, 63, 0.45);
+  }
+  .gold-gradient {
+    @apply bg-gradient-to-br from-gold-soft via-gold to-gold-deep bg-clip-text text-transparent;
+  }
+  .btn-gold {
+    @apply bg-gradient-to-br from-gold-soft to-gold-deep text-slate-950 font-semibold rounded-xl
+           px-6 py-3 transition-all duration-300 hover:shadow-glow hover:brightness-105
+           active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply border border-white/10 text-slate-200 rounded-xl px-6 py-3 transition-all duration-300
+           hover:border-gold/40 hover:text-gold active:scale-[0.98];
+  }
+  .input-field {
+    @apply w-full bg-slate-800/60 border border-white/10 rounded-xl px-4 py-3 text-slate-100
+           placeholder:text-slate-500 outline-none transition-all
+           focus:border-gold/50 focus:ring-1 focus:ring-gold/30;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0F0F14; }
+::-webkit-scrollbar-thumb { background: #33333F; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #C9A227; }
